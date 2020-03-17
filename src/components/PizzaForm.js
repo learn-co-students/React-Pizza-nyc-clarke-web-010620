@@ -17,13 +17,13 @@ const PizzaForm = (props) => {
 
         <div className="col" >
           <div className="form-check" >
-            <input onChange={props.handleChange} name='vegetarian' className="form-check-input" type="radio" value="Vegetarian" checked={props.pizza.vegetarian}/>
+            <input onChange={props.handleChange} name='vegetarian' className="form-check-input" type="radio" value="Vegetarian" checked={props.pizza.vegetarian === 'Vegetarian' ? true : false }/>
             <label className="form-check-label">
               Vegetarian
             </label>
           </div>
           <div className="form-check">
-            <input onChange={props.handleChange} name='vegetarian' className="form-check-input" type="radio" value="Not Vegetarian" checked={!props.pizza.vegetarian}/>
+            <input onChange={props.handleChange} name='vegetarian' className="form-check-input" type="radio" value="Not Vegetarian" checked={props.pizza.vegetarian === 'Not Vegetarian' ? true : false }/>
             <label className="form-check-label">
               Not Vegetarian
             </label>
